@@ -52,3 +52,8 @@ animation = "Idle"
 [node name="collision_shape" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 4 )
 shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+drag_margin_h_enabled = false
+drag_margin_v_enabled = false
