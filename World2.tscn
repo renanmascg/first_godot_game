@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://dirtTiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://WorldComplete.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Inimigo.tscn" type="PackedScene" id=4]
 
 [node name="World2" type="Node2D"]
 
@@ -20,3 +21,8 @@ position = Vector2( 160, 416 )
 [node name="WorldComplete" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1376, 96 )
 name_mundo = "res://World.tscn"
+
+[node name="Inimigos" type="Node" parent="."]
+
+[node name="Inimigo1" parent="Inimigos" instance=ExtResource( 4 )]
+position = Vector2( 384, 544 )

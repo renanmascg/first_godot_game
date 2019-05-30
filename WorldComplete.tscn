@@ -7,7 +7,6 @@
 extents = Vector2( 32, 31.7824 )
 
 [node name="WorldComplete" type="Area2D"]
-editor/display_folded = true
 script = ExtResource( 1 )
 name_mundo = "res://World2.tscn"
 

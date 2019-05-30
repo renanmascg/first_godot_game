@@ -1,0 +1,40 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Inimigo.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Enemy/male/Walk (1).png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Enemy/male/Walk (2).png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Enemy/male/Walk (3).png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Enemy/male/Walk (4).png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Enemy/male/Walk (5).png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Enemy/male/Walk (6).png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Enemy/male/Walk (7).png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Enemy/male/Walk (8).png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Enemy/male/Walk (9).png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Enemy/male/Walk (10).png" type="Texture" id=11]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 10.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+
+[node name="Inimigo" type="StaticBody2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.13, 0.13 )
+frames = SubResource( 1 )
+animation = "Walk"
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 5 )
+scale = Vector2( 1.5, 1.5 )
+shape = SubResource( 2 )
