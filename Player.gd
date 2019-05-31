@@ -47,3 +47,11 @@ func _physics_process(delta):
 
 func _on_Area2D_body_entered(body):
 	body.dano()
+	
+	var controla_altura_pulo = 0.5
+	
+	if Input.is_action_pressed("ui_up"):
+		controla_altura_pulo = 1
+		
+	motion.y = JUMP_HEIGHT * controla_altura_pulo
+	
