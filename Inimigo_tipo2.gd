@@ -37,8 +37,9 @@ func colidiu_ou_fim_de_cenario():
 		not test_motion(vetor_diag)
 
 func dano():
-	is_alive = false
 	colision_disabled = true
+	is_alive = false
+	$Sounds/som_morte.play()
 	$".".position.y += 6
 	$Sprite.play("Die")
 

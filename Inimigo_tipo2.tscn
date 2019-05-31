@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Inimigo_tipo2.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Enemy/male/Walk (1).png" type="Texture" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://Sprites/Enemy/male/Dead (10).png" type="Texture" id=21]
 [ext_resource path="res://Sprites/Enemy/male/Dead (11).png" type="Texture" id=22]
 [ext_resource path="res://Sprites/Enemy/male/Dead (12).png" type="Texture" id=23]
+[ext_resource path="res://Sounds/sfx_damage_hit10.wav" type="AudioStream" id=24]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -57,4 +58,5 @@ shape = SubResource( 2 )
 [node name="Sounds" type="Node" parent="."]
 
 [node name="som_morte" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource( 24 )
 [connection signal="animation_finished" from="Sprite" to="." method="_on_Sprite_animation_finished"]
