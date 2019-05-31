@@ -29,6 +29,7 @@ func _physics_process(delta):
 		
 	if is_on_floor():
 		if Input.is_action_pressed("ui_up"):
+			$Sounds/jump_sound.play()
 			motion.y = JUMP_HEIGHT
 		
 		if friction:
