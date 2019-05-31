@@ -29,3 +29,6 @@ func _process(delta):
 func colidiu_ou_fim_de_cenario():
 	return test_motion(vetor_hor) or \
 		not test_motion(vetor_diag)
+
+func dano():
+	queue_free()
