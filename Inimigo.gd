@@ -4,7 +4,10 @@ var flip = false
 var pos_inicial
 var pos_final 
 
+const ANDAR = 200
 const VELOCIDADE = 1
+
+var movimentar = Vector2()
 
 func _ready():
 	$AnimatedSprite.play("Walk")
@@ -20,7 +23,7 @@ func _process(delta):
 		
 		if $".".position.x >= pos_final:
 			flip = true
-			pos_final = pos_inicial - 100
+			pos_final = pos_inicial - ANDAR
 		
 	elif pos_inicial >= pos_final:
 		$".".position.x -= VELOCIDADE
@@ -28,4 +31,5 @@ func _process(delta):
 		
 		if $".".position.x <= pos_final:
 			flip = false
-			pos_final = pos_inicial + 100
+			pos_final = pos_inicial + ANDAR
+	

@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Inimigo.gd" type="Script" id=1]
+[ext_resource path="res://Inimigo_tipo2.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Enemy/male/Walk (1).png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Enemy/male/Walk (2).png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Enemy/male/Walk (3).png" type="Texture" id=4]
@@ -22,20 +22,15 @@ animations = [ {
 
 [sub_resource type="CapsuleShape2D" id=2]
 
-[node name="Inimigo" type="StaticBody2D"]
+[node name="Inimigo_tipo2" type="RigidBody2D"]
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+[node name="Sprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.13, 0.13 )
 frames = SubResource( 1 )
 animation = "Walk"
-frame = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 5 )
-scale = Vector2( 1.5, 1.5 )
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+position = Vector2( -3, 3 )
+scale = Vector2( 1.5, 1.4 )
 shape = SubResource( 2 )
-one_way_collision_margin = 0.0
